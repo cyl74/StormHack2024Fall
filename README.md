@@ -34,7 +34,7 @@ Node.js (for React frontend)
 
 <h3>Setup and Installation</h3>
 <h5>Backend </h5>
-Make sure you have the following library install: 
+Make sure you have the following library install:
 ```bash
 pip install Flask
 pip install numpy
