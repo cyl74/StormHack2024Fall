@@ -35,7 +35,7 @@ Node.js (for React frontend)
 <h3>Setup and Installation</h3>
 <h5>Backend </h5>
 Make sure you have the following library install:
-```bash
+```
 pip install Flask
 pip install numpy
 pip install opencv-python
@@ -56,11 +56,11 @@ After getting smaile.h5 run the app_smaile.py to get the backend running
 
 <h5>Frontend</h5>
 Navigate to the my-app directory and run:
-```bash
+```
 npm install
 ```
 After all the dependicies are downloaded, please run:
-```bash
+```
 npm start
 ```
 
