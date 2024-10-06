@@ -50,7 +50,7 @@ Using an ubuntu terminal(wsl) run the following command:
 cat models/smaile.zip* > models/smaile.zip
 ```
 
-then unzip said flip to get our AI model, smaile.h5
+Then unzip said flip to get our AI model, smaile.h5
 (you could also just run the modelBuilder.py to get the model, but it will take a long time)
 
 After getting smaile.h5 run the app_smaile.py to get the backend running
