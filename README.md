@@ -41,14 +41,6 @@ pip install opencv-python
 pip install tensorflow
 pip install matplotlib
 pip install scikit-learn
-```
-```pip install Flask
-pip install numpy
-pip install opencv-python
-pip install tensorflow
-pip install matplotlib
-pip install scikit-learn
-```
 
 Using an ubuntu terminal(wsl) run the following command:
 ```bash
