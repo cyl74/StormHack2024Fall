@@ -1,18 +1,23 @@
 import './App.css';
 import UploadFile from './function';
-import {Button} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          smAIle App. Are you sad or happy...?
-        </p>
+        <h1 className="App-title">Sm-AI-le App</h1>
+        <p className="App-subtitle">Find out if you're sad or happy!</p>
       </header>
 
-      <p className="Instructions">Upload your face here:</p>
-      <UploadFile />
+      <Container className="content">
+        <Row className="justify-content-center">
+          <Col md={8} className="text-center">
+            <p className="Instructions">Upload your picture and let us analyze your facial expression!</p>
+            <UploadFile />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

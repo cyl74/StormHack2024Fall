@@ -1,42 +1,86 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 
 .App-header {
-  background-color: #ff69b4;
-  min-height: 25vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #FF69B4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.App-title {
+  font-size: 2.5rem;
   color: white;
-  border: solid;
-  border-color: white;
+  margin-bottom: 0.5rem;
+}
+
+.App-subtitle {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* Main Content */
+.content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 20px auto;
 }
 
 .Instructions {
-  font-size: xx-large;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.file-button{
-  background-color: #ff69b4;
-  color: white; /* Text color */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor on hover */
-  font-size: 16px; /* Font size */
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-  display: inline-block; /* Align properly with the file input */
+/* Custom Upload Button */
+button {
+  background-color: #FF69B4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-h3 {
+button:hover {
+  background-color: #ff82b5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App-title {
+    font-size: 2rem;
+  }
   
+  .App-subtitle {
+    font-size: 1rem;
+  }
+  
+  .Instructions {
+    font-size: 1rem;
+  }
 }
