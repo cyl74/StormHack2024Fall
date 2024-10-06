@@ -34,6 +34,7 @@ Node.js (for React frontend)
 <h3>Setup and Installation</h3>
 <h5>Backend </h5>
 Make sure you have the following library install:
+
 ```bash
 pip install Flask
 pip install numpy
@@ -41,6 +42,7 @@ pip install opencv-python
 pip install tensorflow
 pip install matplotlib
 pip install scikit-learn
+```
 
 Using an ubuntu terminal(wsl) run the following command:
 ```bash
