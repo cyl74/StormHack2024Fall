@@ -31,12 +31,10 @@ Python 3.8-3.11
 
 Node.js (for React frontend)
 
-
 <h3>Setup and Installation</h3>
 <h5>Backend </h5>
 Make sure you have the following library install:
-```
-pip install Flask
+```pip install Flask
 pip install numpy
 pip install opencv-python
 pip install tensorflow
