@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 
-
 function UploadFile() {
     const [selectedFile, setSelectedFile] = useState(null);  // State to hold the selected file
     const [imagePreview, setImagePreview] = useState(null);  // State to hold the image preview URL
@@ -67,6 +66,5 @@ function UploadFile() {
         </div>
     );
 }
-
 
 export default UploadFile;

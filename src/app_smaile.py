@@ -2,15 +2,17 @@ from flask import Flask, request, jsonify
 import numpy as np
 import cv2
 import tensorflow as tf
+from flask_cors import CORS
 
-# Load the trained model
-model = tf.keras.models.load_model('models/smaile.h5')
-
+# Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
+# Load the trained model once at startup
+model = tf.keras.models.load_model('models/smaile.h5')
 
 def preprocess_image(image_file):
     """Loads and preprocesses the image for the model from a file stream."""
-    # Read the image file into a numpy array
     img_array = np.frombuffer(image_file.read(), np.uint8)
     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
     img = cv2.resize(img, (256, 256))  # Resize to match model input
@@ -22,11 +24,8 @@ def predict_smile(image_file):
     processed_image = preprocess_image(image_file)
     prediction = model.predict(processed_image)
     
-    # Interpretation of prediction
-    if prediction[0][0] > 0.5:
-        return "Smiling"
-    else:
-        return "Not Smiling"
+    # Return a native Python boolean for JSON serialization
+    return bool(prediction[0][0] > 0.5)  # Convert numpy boolean to Python boolean
 
 @app.route('/api/check-smile', methods=['POST'])
 def check_smile():
@@ -36,9 +35,9 @@ def check_smile():
     file = request.files['image']
 
     # Predict smile status using the file directly
-    result = predict_smile(file)  # Pass the file object directly
+    is_smiling = predict_smile(file)  # Get boolean result
 
-    return jsonify({'smiling': result})
+    return jsonify({'smiling': is_smiling})  # Return boolean in the response
 
 if __name__ == '__main__':
     app.run(debug=True)
