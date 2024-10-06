@@ -45,6 +45,7 @@ pip install scikit-learn
 ```
 
 Using an ubuntu terminal(wsl) run the following command:
+
 ```bash
 cat models/smaile.zip* > models/smaile.zip
 ```
@@ -56,10 +57,12 @@ After getting smaile.h5 run the app_smaile.py to get the backend running
 
 <h5>Frontend</h5>
 Navigate to the my-app directory and run:
+
 ```bash
 npm install
 ```
 After all the dependicies are downloaded, please run:
+
 ```bash
 npm start
 ```
