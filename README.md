@@ -1,4 +1,4 @@
-# SM-AI_LE 
+# SM_AI_LE 
 
 <h3>Description</h3>
 This project is a simple web application that allows users to upload an image and determine whether the person in the image is smiling or not using a pre-trained machine learning model. The app uses a React frontend for image upload and display, and a Flask backend API that processes the image and returns the result, smiling/not smiling.
